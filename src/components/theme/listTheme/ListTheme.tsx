@@ -48,7 +48,7 @@ function ListTheme() {
 
 
   return (
-    <>
+    <main>
       {
         isLoading && (
           <div className="flex justify-center w-full my-8">
@@ -75,7 +75,7 @@ function ListTheme() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 

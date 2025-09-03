@@ -92,8 +92,7 @@ function FormTheme() {
 
 
     return (
-
-        <div className="container flex flex-col items-center justify-center mx-auto">
+        <main className="container flex flex-col items-center justify-center mx-auto">
             <h1 className="text-4xl text-center my-8">
                 {id === undefined ? `Cadastrar Tema` : `Editar tema`}
             </h1>
@@ -126,7 +125,7 @@ function FormTheme() {
 
                 </button>
             </form>
-        </div>
+        </main>
     );
 }
 export default FormTheme
