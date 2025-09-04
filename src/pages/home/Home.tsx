@@ -1,3 +1,4 @@
+import ListPosts from "../../components/posts/listposts/ListPosts"
 
 function Home() {
     return (
@@ -30,6 +31,8 @@ function Home() {
                     </div>
                 </div>
             </main>
+            
+            <ListPosts />
         </>
     )
 }

@@ -22,7 +22,9 @@ function Navbar() {
           <Link to='/' className="text-2xl font-bold">Blog Pessoal</Link>
 
           <ul className='flex gap-4'>
-            <li>Postagens</li>
+            <li>
+              <Link to='/posts' className='hover:underline'>Postagens</Link>
+            </li>
             <li>
               <Link to='/temas' className='hover:underline'>Temas</Link>
             </li>

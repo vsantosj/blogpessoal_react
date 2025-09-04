@@ -11,9 +11,14 @@ function Login() {
 
     const { user, handleLogin, isLoading } = useContext(AuthContext);
 
-    const [userLogin, setUserLogin] = useState<UserLogin>(
-        {} as UserLogin
-    )
+    const [userLogin, setUserLogin] = useState<UserLogin>({
+        user: '',
+        password: '',
+        id: 0,
+        name: '',
+        photoUrl: '',
+        token: ''
+    });
 
     useEffect(() => {
         if (user.token !== "") {
