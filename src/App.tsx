@@ -10,6 +10,9 @@ import ListTheme from './components/theme/listtheme/ListTheme'
 import FormTheme from './components/theme/formtheme/FormTheme'
 import DeleteTheme from './components/theme/deletetheme/DeleteTheme'
 import ListPosts from './components/posts/listposts/ListPosts'
+import FormPosts from './components/posts/formposts/FormPosts'
+import DeletePosts from './components/posts/deleteposts/DeletePosts'
+
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
               <Route path="/editartema/:id" element={<FormTheme />} />
               <Route path="/deletartema/:id" element={<DeleteTheme />} />
               <Route path="/posts" element={<ListPosts />} />
+              <Route path="/cadastarposts" element={<FormPosts />} />
+              <Route path="/editarpost/:id" element={<FormPosts />} />
+              <Route path="/deletarpost/:id" element={<DeletePosts />} />
             </Routes>
           </div>
           <Footer />

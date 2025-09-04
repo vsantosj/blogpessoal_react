@@ -1,4 +1,5 @@
 import ListPosts from "../../components/posts/listposts/ListPosts"
+import ModalPosts from "../../components/posts/modalposts/ModalPosts"
 
 function Home() {
     return (
@@ -14,10 +15,8 @@ function Home() {
                         </p>
 
                         <div className="flex justify-around gap-4">
-                            <div className='rounded text-white 
-                                            border-white border-solid border-2 py-2 px-4'
-                            >
-                                Nova Postagem
+                            <div className='flex justify-around gap-4'>
+                                <ModalPosts />
                             </div>
                         </div>
                     </div>
@@ -31,7 +30,7 @@ function Home() {
                     </div>
                 </div>
             </main>
-            
+
             <ListPosts />
         </>
     )
