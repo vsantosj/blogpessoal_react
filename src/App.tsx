@@ -12,6 +12,7 @@ import DeleteTheme from './components/theme/deletetheme/DeleteTheme'
 import ListPosts from './components/posts/listposts/ListPosts'
 import FormPosts from './components/posts/formposts/FormPosts'
 import DeletePosts from './components/posts/deleteposts/DeletePosts'
+import Profile from './pages/profile/Profile'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
               <Route path="/cadastarposts" element={<FormPosts />} />
               <Route path="/editarpost/:id" element={<FormPosts />} />
               <Route path="/deletarpost/:id" element={<DeletePosts />} />
+              <Route path="/perfil" element={<Profile />} />
             </Routes>
           </div>
           <Footer />
