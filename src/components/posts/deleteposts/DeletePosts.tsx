@@ -1,9 +1,11 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { AuthContext } from "../../../contexts/AuthContext";
 import { ClipLoader } from "react-spinners";
+
+import { AuthContext } from "../../../contexts/AuthContext";
 import type Posts from "../../../models/Posts";
 import { find, remove } from "../../../services/Service";
+import { ToastAlert } from "../../../utils/ToastAlert";
 
 function DeletePosts() {
   const navigate = useNavigate();
@@ -32,7 +34,7 @@ function DeletePosts() {
 
   useEffect(() => {
     if (token === "") {
-      alert("Você precisa estar logado");
+      ToastAlert("Você precisa estar logado", "info");
       navigate("/");
     }
   }, [token]);
@@ -53,12 +55,12 @@ function DeletePosts() {
         },
       });
 
-      alert("Postagem apagada com sucesso");
+      ToastAlert("Postagem apagada com sucesso", "sucess");
     } catch (error: any) {
       if (error.toString().includes("401")) {
         handleLogout();
       } else {
-        alert("Erro ao deletar a postagem.");
+        ToastAlert("Erro ao deletar a postagem.", "error");
       }
     }
 

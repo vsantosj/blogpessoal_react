@@ -3,7 +3,8 @@ import {
   InstagramLogoIcon,
   LinkedinLogoIcon,
 } from "@phosphor-icons/react";
-import { useContext, type ReactNode } from "react";
+import { type ReactNode, useContext } from "react";
+
 import { AuthContext } from "../../contexts/AuthContext";
 
 function Footer() {
